@@ -21,7 +21,7 @@
 	  <meta property="og:image" content="http://deshaunjones.com/wp-content/uploads/2018/04/Portfolio-Jones-Resume.png" />
     
     <!-- Custom CSS Styles -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>style.css" />
+    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
