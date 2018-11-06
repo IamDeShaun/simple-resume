@@ -1,6 +1,9 @@
 <?php
 /* Template Name: Home Page */
 
+$skills_headline = get_field('skills_headline');
+$skills_description = get_field('skills_description');
+
 get_header(); ?>
 <!-- Site Hero Area-->
 <section id="site-hero" class="site-hero">
@@ -21,8 +24,8 @@ get_header(); ?>
       
           <div class="small-container">
             <header class="section-header">
-                <h2>Technical Skills</h2>
-                <p>I specialize in front end development and creating Wordpress themes from scratch!</p>
+                <h2><?php echo $skills_headline; ?></h2>
+                <p><?php echo $skills_description; ?></p>
               
             </header>
           </div><!-- End of Small Container-->

@@ -57,7 +57,7 @@ get_header(); ?>
             
             <div class="col-sm-6 makeroom">
                 <a href="#loan-calc-app" data-toggle="modal">
-                <img src="http://dev-deshaunjones/wp-content/uploads/2018/11/github-api.png" class="img-fluid rounded" alt="Loan Calculator Application Portfolio">
+                <img src="http://dev-deshaunjones/wp-content/uploads/2018/11/js-loan-app-port-img.png" class="img-fluid rounded" alt="Loan Calculator Application Portfolio">
                 <h5>Loan Calculator Application</h5>
               </a>
                 <!-- Portfolio Modal -->
@@ -77,7 +77,7 @@ get_header(); ?>
                           <div class="container">
                             <div class="row">
                               <div class="col-sm-7">
-                                  <img class="img-fluid" src="http://dev-deshaunjones/wp-content/uploads/2018/11/github-api.png" alt="Loan Calculator Portfolio Image">
+                                  <img class="img-fluid" src="http://dev-deshaunjones/wp-content/uploads/2018/11/js-loan-app-port-img.png" alt="Loan Calculator Portfolio Image">
                               </div>
                               <div class="col-sm-5">
                                 <p><strong>Description: </strong> Created a simple JS application using HTML, CSS and JS for DOM manipulation. The JS loan calculator gets the total amount of a loan after interest and length of payment is applied.</p>
