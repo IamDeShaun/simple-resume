@@ -3,10 +3,27 @@
 
 $skills_headline = get_field('skills_headline');
 $skills_description = get_field('skills_description');
+
 $experience_header = get_field('experience_header');
 $experience_description = get_field('experience_description');
 $experience_link_text = get_field('experience_link_text');
 $experience_link = get_field('experience_link');
+
+$job_a = get_field('job_a');
+$time_employeed_a = get_field('time_employeed_a');
+$job_title_a = get_field('job_title_a');
+$job_description_a = get_field('job_description_a');
+
+$second_job = get_field('second_job');
+$second_job_time = get_field('second_job_time');
+$job_title_b = get_field('job_title_b');
+$job_description_b = get_field('job_description_b');
+
+$home_portfolio_headline = get_field('home_portfolio_headline');
+$home_portfolio_description = get_field('home_portfolio_description');
+$hp_link_text = get_field('hp_link_text');
+$home_portfolio_link = get_field('home_portfolio_link');
+
 
 get_header(); ?>
 <!-- Site Hero Area-->
@@ -76,36 +93,23 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-sm-4 job-title">
-        <h5>Rensselaer Polytechnic Institute</h5>
-        <div class="dates">August 2016 - Present</div>
+        <h5><?php echo $job_a; ?></h5>
+        <div class="dates"><?php echo $time_employeed_a ; ?></div>
       </div>
       <div class="col-sm-8 job-descrip">
-        <h5>Web Developer</h5>
-        <p>Currently improving the web presence for the Folsom Library department at Rensselaer. Responsibilities include re developing the Folsom Library websites, maintenance and communication.</p>
-          <ul>
-            <li>Collaborate with other team members and stakeholders.</li>
-            <li>Create quality mockups and prototypes on tight timelines.</li>
-            <li>Maintain branding throughout the product’s interface.</li>
-            <li>Develop functional and appealing web applications based on usability.</li>
-            <li>Provide website maintenance and enhancements.</li>
-          </ul>
+        <h5><?php echo $job_title_a; ?></h5>
+       <?php echo $job_description_a; ?>
       </div>
       </div>
       <hr>
       <div class="row">
       <div class="col-sm-4 job-title">
-        <h5>Graham Windham</h5>
-        <div class="dates">Freelancer</div>
+        <h5><?php echo $second_job; ?></h5>
+        <div class="dates"><?php echo $second_job_time; ?></div>
       </div>
       <div class="col-sm-8 job-descrip">
-          <h5>WordPress Developer</h5>
-        <p>As a WordPress Developer for Graham Windham I was tasked with creating a custom page template for the organization current WordPress theme website.</p>
-          <ul>
-            <li>Tools used for this job was HTML5, CSS, JS and PHP.</li>
-            <li>Collaborate with other team members and stakeholders.</li>
-            <li>Designing and implementing custom page templates.</li>
-            <li>Formulate an effective, responsive design and turning it into a working theme.</li>
-          </ul>
+          <h5><?php echo $job_title_b; ?></h5>
+       <?php echo $job_description_b; ?>
       </div>
     </div>
   </div>
@@ -117,132 +121,39 @@ get_header(); ?>
 <section id="portfolio" class="mb-4">
     <div class="small-container">
         <header class="section-header">
-            <h2>Portfolio</h2>
-            <p>Here are some examples of my work. View my full <a href="portfolio.html" target="_blank">Portfolio!</a></p> 
+            <h2><?php echo $home_portfolio_headline; ?></h2>
+            <p><?php echo $home_portfolio_description; ?><a href="<?php echo $home_portfolio_link; ?>" target="_blank"><?php echo $hp_link_text; ?></a></p> 
         </header>
       </div><!-- End of Small Container-->
 
       <div class="container">
         <div class="row">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+               
+               <?php the_content(); ?>
+           
+             <?php endwhile; endif; ?>
+
+             <?php 
+                    $args = array(
+                    'post_type' => 'home_portfolio',
+                    'order' => 'DSC'
+                    );
+                    $query = new WP_Query( $args );
+                    ?>
+
+              <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+
               <div class="col-sm-4">
-                  <a href="#homeportfolio1" data-toggle="modal">
-                  <img src="http://dev-deshaunjones/wp-content/uploads/2018/11/portfolio-front-end.png" class="img-fluid rounded" alt="Front End Development Portfolio Image">
-                  <h6>Front-End Web Development</h6>
+                  <a href="<?php the_field('hp_link_to_modal'); ?>" data-toggle="modal">
+                  <?php the_field('hp_image'); ?>
+                  <h6><?php the_title();?></h6>
                 </a>
-                <!-- Portfolio Modal 1 -->
-                  <div class="portfolio-modal modal fade" id="homeportfolio1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Front End Web Development</h5>
-                            <div class="close-modal" data-dismiss="modal">
-                                <div class="lr">
-                                  <div class="rl">
-                                  </div>
-                                </div>
-                              </div>
-                          </div>
-                          <div class="modal-body">
-                            <div class="container">
-                              <div class="row">
-                                <div class="col-sm-7">
-                                    <img class="img-fluid" src="img/Portfolio-Front-End.png" alt="Front End Development Portfolio Image">
-                                </div>
-                                <div class="col-sm-5">
-                                  <p><strong>Description: </strong> This project is a static HTML website showcasing my online portfolio. This application uses the Bootstrap 4 framework, scss styling and javascript.</p>
-                                  <p><strong>View The: </strong><a href="https://iamdeshaun.github.io/Front-End-Development-Portfolio/" target="_blank">Live Project</a> | <a href="https://github.com/IamDeShaun/Front-End-Development-Portfolio" target="_blank">Github Repos</a> </strong></p>
-                                </div>
-                              </div>
-                            </div>
-
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div> 
-                  </div> <!-- End Portfolio Modal 1 -->
+                <?php the_field('hp_modal'); ?>
+               
             </div><!-- End Of Porfolio Item -->
-          
-          <div class="col-sm-4">
-              <a href="#homeportfolio2" data-toggle="modal">
-              <img src="http://dev-deshaunjones/wp-content/uploads/2018/11/github-api.png" class="img-fluid rounded" alt="Github API Portfolio Image">
-              <h6>Javascript Application</h6>
-            </a>
-            <!-- Portfolio Modal 2 -->
-                <div class="portfolio-modal modal fade" id="homeportfolio2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title">JavaScript Application</h5>
-                          <div class="close-modal" data-dismiss="modal">
-                              <div class="lr">
-                                <div class="rl">
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-sm-7">
-                                  <img class="img-fluid" src="img/github-api.png" alt="JavaScript Portfolio Image">
-                              </div>
-                              <div class="col-sm-5">
-                                <p><strong>Description: </strong> A simple one page application that uses a fetch api call to pull data from Github. This application uses the Bootstrap 4 framework, scss styling and javascript.</p>
-                                <p><strong>View The: </strong><a href="https://iamdeshaun.github.io/github-api/" target="_blank">Live Project</a> | <a href="https://github.com/IamDeShaun/github-api" target="_blank">Github Repos</a> </strong></p>
-                              </div>
-                            </div>
-                          </div>
-
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
-                </div> <!-- End Portfolio Modal 2 -->
-          </div><!-- End Of Porfolio Item -->
-
-          <div class="col-sm-4">
-              <a href="#homeportfolio3" data-toggle="modal">
-              <img src="http://dev-deshaunjones/wp-content/uploads/2018/11/Laravel-Port-IMG.png" class="img-fluid rounded" alt="Laravel CRUD Portfolio Image">
-              <h6>Laravel CRUD APP</h6>
-            </a>
-                <!-- Portfolio Modal 3 -->
-                <div class="portfolio-modal modal fade" id="homeportfolio3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title">Laravel Crud Application</h5>
-                          <div class="close-modal" data-dismiss="modal">
-                              <div class="lr">
-                                <div class="rl">
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-sm-7">
-                                  <img class="img-fluid" src="img/Laravel-Port-IMG.png" alt="Laravel Portfolio Image">
-                              </div>
-                              <div class="col-sm-5">
-                                <p><strong>Description: </strong> This is a simple CRUD application using Laravel 5.6 and deployed using the Heroku platform. This application uses the Bootstrap 4 framework, Laravel CSS styling and MYSQL.</p>
-                                <p><strong>View The: </strong><a href="http://sleepy-tundra-68514.herokuapp.com/" target="_blank">Live Project</a> | <a href="https://github.com/IamDeShaun/laravelapp" target="_blank">Github Repos</a> </strong></p>
-                              </div>
-                            </div>
-                          </div>
-
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
-                </div> <!-- End Portfolio Modal 3 -->
-          </div><!-- End Of Porfolio Item -->
+  
+            <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
       </div>
 </section>
