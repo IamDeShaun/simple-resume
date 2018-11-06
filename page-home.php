@@ -4,6 +4,7 @@
 $skills_headline = get_field('skills_headline');
 $skills_description = get_field('skills_description');
 
+
 get_header(); ?>
 <!-- Site Hero Area-->
 <section id="site-hero" class="site-hero">
@@ -32,58 +33,30 @@ get_header(); ?>
             
           <div class="container">
             <div class="row">
-                <div class="col-sm-3 card">
-                    <i class="fab fa-html5 fa-5x" style="color:#e34f26"></i>
-                    <h3>HTML</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="fab fa-css3-alt fa-5x" style="color:#0645ad;"></i>
-                    <h3>CSS</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="fab fa-sass fa-5x" style="color:#c69;"></i>
-                    <h3>SCSS</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="fab fa-js fa-5x" style="color:#f7df1e;"></i>
-                    <h3>Javascript</h3>
-                </div>
-            </div><!-- End of Row-->
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+               
+               <?php the_content(); ?>
+           
+             <?php endwhile; endif; ?>
 
-            <div class="row">
-                <div class="col-sm-3 card">
-                    <i class="fab fa-php fa-5x" style="color:#4f5b93;"></i>
-                    <h3>PHP</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="fas fa-database fa-5x" style="color: #00758f;"></i>
-                    <h3>Sql</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="fab fa-github fa-5x" style="color: #6e5494;"></i>
-                    <h3>Git</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="fas fa-terminal fa-5x"></i>
-                    <h3>Command Line</h3>
-                </div>
-            </div><!-- End of Row-->
+             <?php 
+                    $args = array(
+                    'post_type' => 'techskills',
+                    'order' => 'DSC'
+                    );
+                    $query = new WP_Query( $args );
+                    $skill_icon = get_field('skill_icon');
+                    $skill_title = get_field('skill_title');
+                    ?>
 
-            <div class="row">
-                <div class="col-sm-3 card">
-                    <i class="fab fa-wordpress-simple fa-5x" style="color:#21759b;"></i>
-                    <h3>WordPress</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="fab fa-drupal fa-5x" style="color:#0077c0;"></i>
-                    <h3>Drupal</h3>
-                </div>
-                <div class="col-sm-3 card">
-                    <i class="far fa-smile-wink fa-5x" style="color:#45bafc"></i>
-                    <h3>Pizza Connoisseur</h3>
-                </div>
-            </div><!-- End of Row-->
+              <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
+                <div class="col-sm-3 card">
+                <?php the_field('skill_icon'); ?>
+                    <h3><?php the_title(); ?></h3>
+                </div><!-- End Card -->
+                <?php endwhile; endif; wp_reset_postdata(); ?>
+                </div><!-- End of Row -->
           </div><!-- End of Large Container-->
 </section>
 <!-- End Technical Skills Section-->
