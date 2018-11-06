@@ -3,7 +3,10 @@
 
 $skills_headline = get_field('skills_headline');
 $skills_description = get_field('skills_description');
-
+$experience_header = get_field('experience_header');
+$experience_description = get_field('experience_description');
+$experience_link_text = get_field('experience_link_text');
+$experience_link = get_field('experience_link');
 
 get_header(); ?>
 <!-- Site Hero Area-->
@@ -53,7 +56,7 @@ get_header(); ?>
 
                 <div class="col-sm-3 card">
                 <?php the_field('skill_icon'); ?>
-                    <h3><?php the_title(); ?></h3>
+                    <h3><?php the_field('skill_title'); ?></h3>
                 </div><!-- End Card -->
                 <?php endwhile; endif; wp_reset_postdata(); ?>
                 </div><!-- End of Row -->
@@ -65,8 +68,8 @@ get_header(); ?>
 <section id="experience">
   <div class="small-container">
       <header class="section-header">
-            <h2>Experience </h2>
-            <p>Some of the position's I held. Here is my full <a href="resume.html" target="_blank">Resume.</a></p>
+            <h2><?php echo $experience_header; ?></h2>
+            <p><?php echo $experience_description; ?> <a href="<?php echo $experience_link; ?>" target="_blank"><?php echo $experience_link_text; ?></a></p>
         </header>
   </div>
 
