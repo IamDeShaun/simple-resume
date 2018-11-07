@@ -868,7 +868,9 @@ header span.brandnew a {
   color: #fff !important; }
 header .navbar a {
   color: #bec6d5 !important;
-  font-size: 1rem !important; }
+  font-size: 1rem !important;
+  text-transform: uppercase;
+ }
 header .navbar a:hover {
   color: #fff !important;
   font-size: 1rem !important; }
