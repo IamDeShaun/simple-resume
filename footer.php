@@ -18,7 +18,7 @@
 <!-- Footer Area-->
   <footer class="footer text-center">
       <div class="container">
-        Developed by DeShaun Jones.
+        Developed by DeShaun Jones
       </div>
     </footer>
     <!-- Optional JavaScript -->

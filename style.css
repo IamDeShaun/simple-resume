@@ -952,8 +952,7 @@ span.site-hero h1 {
   margin-bottom: 1rem; }
 
 #resume {
-  padding-bottom: 50px;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
   background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
   background: linear-gradient(to top right, #f6f6f7, #fefefe);
 	text-align: center; }
@@ -993,6 +992,10 @@ span.site-hero h1 {
   background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
   background: linear-gradient(to top right, #f6f6f7, #fefefe);
   text-align: center; }
+
+  #fullportfolio a:hover {
+		color: #0056b3 !important;
+} 
 
 #fullportfolio img {
   margin-bottom: 25px; }
