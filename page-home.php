@@ -10,7 +10,7 @@ get_header(); ?>
 <?php get_template_part('content', 'skills');?>
 
 <!-- Resume Section-->
-<?php get_template_part('content', 'skills'); ?>
+<?php get_template_part('content', 'resume'); ?>
 
 <!-- Portolio Section-->
 <?php get_template_part('content', 'portfolio'); ?>

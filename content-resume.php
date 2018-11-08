@@ -27,7 +27,7 @@ $job_description_b = get_field('job_description_b');
     <div class="row">
       <div class="col-sm-4 job-title">
         <h5><?php echo $job_a; ?></h5>
-        <div class="dates"><?php echo $time_employeed_a ; ?></div>
+        <div class="dates"><i><?php echo $time_employeed_a ; ?></i></div>
       </div>
       <div class="col-sm-8 job-descrip">
         <h5><?php echo $job_title_a; ?></h5>
@@ -38,7 +38,7 @@ $job_description_b = get_field('job_description_b');
       <div class="row">
       <div class="col-sm-4 job-title">
         <h5><?php echo $second_job; ?></h5>
-        <div class="dates"><?php echo $second_job_time; ?></div>
+        <div class="dates"><i><?php echo $second_job_time; ?></i></div>
       </div>
       <div class="col-sm-8 job-descrip">
           <h5><?php echo $job_title_b; ?></h5>

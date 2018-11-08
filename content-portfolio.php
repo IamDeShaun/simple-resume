@@ -42,6 +42,5 @@ $home_portfolio_link = get_field('home_portfolio_link');
   
             <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
-      </div>
-</section>
-<!-- End Portolio Section-->
+      </div> <!-- End Container -->
+</section> <!-- End Portolio Section-->

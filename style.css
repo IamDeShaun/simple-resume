@@ -441,7 +441,13 @@ template {
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
-	width: 50%;
+  width: 50%;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.nav-previous:hover {
+  color: #007bff;
 }
 
 .comment-navigation .nav-next,
@@ -449,7 +455,13 @@ template {
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
-	width: 50%;
+  width: 50%;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.nav-next:hover {
+  color: #007bff;
 }
 
 /*--------------------------------------------------------------
@@ -552,12 +564,22 @@ template {
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
+  /* Make sure select elements fit in widgets. */
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  padding: 20px;
 }
 
 .widget select {
 	max-width: 100%;
 }
+
+.widget h4 {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: solid 1px #ddd;
+}
+
 
 /*--------------------------------------------------------------
 # Content
@@ -747,9 +769,19 @@ body {
 body > .container {
   padding: 60px 15px 0; }
 
+#primary {
+    margin-top: 80px;
+  }
 .primary {
   color: #45bafc; }
 
+.page-links {
+  font-size: 1rem;
+  font-weight: 800;
+}
+#main a:hover {
+  color: #007bff ;
+}
 hr {
   height: 1px;
   margin-left: 15px;
@@ -803,8 +835,7 @@ embed, iframe, object {
   padding: 2rem 0 !important; }
 
 #experience {
-  margin-bottom: 40px;
-  padding-bottom: 50px; }
+  padding-bottom: 10px; }
 
 .section-header {
   text-align: center;
@@ -988,8 +1019,6 @@ span.site-hero h1 {
 
 #fullportfolio {
   padding-top: 2rem;
-  padding-bottom: 60px;
-  margin-bottom: 60px;
   margin-top: 4rem;
   background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
   background: linear-gradient(to top right, #f6f6f7, #fefefe);
@@ -1006,8 +1035,8 @@ span.site-hero h1 {
   margin-bottom: 25px; }
 
 .modal-dialog {
-  max-width: 80% !important;
-  max-height: 50% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   padding: 0 !important; }
 
 .modal-header {
@@ -1048,11 +1077,11 @@ span.site-hero h1 {
   cursor: pointer; }
 
 .portfolio-modal .close-modal:hover {
-  opacity: 0.3; }
+  opacity: 0.5; }
 
 .portfolio-modal .close-modal .lr {
   height: 50px;
-  width: 1px;
+  width: 4px;
   margin-left: 35px;
   background-color: #000120;
   transform: rotate(45deg);
@@ -1064,7 +1093,7 @@ span.site-hero h1 {
 
 .portfolio-modal .close-modal .lr .rl {
   height: 50px;
-  width: 1px;
+  width: 4px;
   background-color: #000120;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -1080,7 +1109,6 @@ span.site-hero h1 {
 #github-repos {
   padding-top: 2rem;
   padding-bottom: 60px;
-  margin-bottom: 60px;
   margin-top: 4rem;
   background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
   background: linear-gradient(to top right, #f6f6f7, #fefefe);
@@ -1090,9 +1118,8 @@ span.site-hero h1 {
 # Contact Section
 --------------------------------------------------------------*/
 #contact {
-  padding-top: 2rem;
-  padding-bottom: 60px;
-  margin-bottom: 60px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
   text-align: center; }
   #contact a i.fa-envelope-square {
     color: #239ab9; }
@@ -1121,12 +1148,24 @@ span.site-hero h1 {
 # Media Queries
 --------------------------------------------------------------*/
 @media (max-width: 575px) {
+
+  .site-hero {
+    padding-top: 30px !important;
+    margin-top: 50px !important;
+    padding-bottom: 30px !important;
+  }
+
+  #site-hero h1 {
+    font-size: 2rem;
+    max-width: 90vw;
+}
+
   #portfolio h6 {
     padding-top: 10px !important;
     padding-bottom: 20px !important; }
 
   .modal-dialog {
-    max-width: 95% !important; }
+    max-width: 100% !important; }
 
   .portfolio-modal .close-modal {
     position: absolute;
@@ -1139,11 +1178,11 @@ span.site-hero h1 {
 
   .portfolio-modal .close-modal .lr {
     height: 40px !important;
-    width: 1px; }
+    width: 4px !important; }
 
   .portfolio-modal .close-modal .rl {
     height: 40px !important;
-    width: 1px; }
+    width: 4px !important; }
 
   #fullportfolio .portfolio-modal .close-modal {
     position: absolute;
@@ -1156,13 +1195,14 @@ span.site-hero h1 {
 
   #fullportfolio .portfolio-modal .close-modal .lr {
     height: 40px !important;
-    width: 1px; }
+    width: 4px !important; }
 
   #fullportfolio .portfolio-modal .close-modal .rl {
     height: 40px !important;
-    width: 1px; }
+    width: 4px !important; }
 
   #contact h6 {
     margin-bottom: 30px !important; } }
+
 
 

@@ -14,41 +14,31 @@ get_header();
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'simple-resume' ); ?></h1>
+			<div class="small-container">
+			<header class="section-header">
+					<h2><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'simple-resume' ); ?></h2><br >
+					<p> Let's travel back to the <a href="http://dev-deshaunjones/">home page</a></p>
 				</header><!-- .page-header -->
+			</div>
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<h5 style="text-align:center;">View my resume in the mean time</h5> 
+						<iframe src="https://drive.google.com/file/d/177KospaEkOc8gKUkuTfpfamFINgT1ati/preview" width="100%" height="1000px"></iframe>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'simple-resume' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'simple-resume' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$simple_resume_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'simple-resume' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$simple_resume_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+					</div>
+					<aside class="side-info col-sm-4">
+					<aside id="secondary" class="widget-area" role="complementary">
+					<section id="text-2" class="widget widget_text">
+						<h4 class="widget-title">Hire Me</h4>			
+						<div class="textwidget"><strong>Best Web Design &amp; Development services online! </strong>I'm currently available for any freelancing opportunities. Contact me know so we can get started building your web presence!<br><br><a href="mailto:ceo@deshaunjones.com" class="btn btn-warning"> Lets Work</a></div>
+					</section>
+		
+						</aside>
+					</aside>
+				</div> <!-- End .row -->
+			</div> <!-- End .container -->
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
