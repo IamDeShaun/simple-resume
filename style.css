@@ -899,12 +899,12 @@ header span.brandnew a {
   color: #fff !important; }
 header .navbar a {
   color: #bec6d5 !important;
-  font-size: 1rem !important;
+  font-size: 1rem;
   text-transform: uppercase;
  }
 header .navbar a:hover {
   color: #fff !important;
-  font-size: 1rem !important; }
+  font-size: 1rem; }
 header .navbar-light .navbar-toggler {
   color: #fff !important;
   border: 0px !important;
@@ -1149,6 +1149,21 @@ span.site-hero h1 {
 --------------------------------------------------------------*/
 @media (max-width: 575px) {
 
+  nav ul {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  nav a {
+    text-align: center;
+  }
+
+  a.nav-link {
+    font-size: 1.5rem !important;
+  }
+
+  a.nav-link:hover {
+    font-size: 1.5rem !important;
+  }
   .site-hero {
     padding-top: 30px !important;
     margin-top: 50px !important;
