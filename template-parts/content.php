@@ -9,53 +9,49 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<div class="blog-container">
+
+	<article id="post-<?php the_ID(); ?>" class="card card-body mb-2">
+	<header>
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h3 class="entry-title">', '</h3>' );
+			the_title( '<h4 class="u-mb3">', '</h4>' );
 		else :
-			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+			the_title( '<h4 class="u-mb3"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				simple_resume_posted_on();
-				simple_resume_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+			
 		<?php endif; ?>
 	</header><!-- .entry-header -->
+	  <div class="row">
+          <div class="col-sm-4">
+						<?php if ( has_post_thumbnail() ) { // Check for post image ?>
+            <div class="post-thumb">
+                <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('full'); ?></a>
+						</div>
+						<?php } ?>
+          </div>
+          <div class="col-sm-8">
+            <div>
+                 <?php the_excerpt(); ?>
 
-	<?php simple_resume_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'simple-resume' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links"><h5>' . esc_html__( 'Pages:', 'simple-resume' ),
-			'after'  => '</h5></div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
+            </div>
+            <div class="meta">
+              <span> By: <?php the_author(); ?></span>
+              <span><i class="far fa-clock"> <?php the_date(); ?></i></span>
+              <span>
+                <i class="fa fa-tags"><?php the_tags(); ?></i>
+						</div>
+						<footer class="entry-footer">
 		<?php simple_resume_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+					</div>
+        </div> <!-- End Row-->
+</article>
+</div>
+
+
 
 

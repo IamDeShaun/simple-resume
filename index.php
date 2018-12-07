@@ -12,13 +12,15 @@
  * @package Simple_Resume
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
+<!-- Blog Section -->
+<section id="blog">
+    <div class="blog-container">
+      <header>
+          <h2>Latest Blog</h2>
+      </header>
+			<?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
@@ -51,9 +53,8 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			</div> <!-- End Blog-Container -->
+</section> <!-- End Blog Section -->
 
-<?php
-get_sidebar();
-get_footer();
+
+<?php get_footer(); ?>

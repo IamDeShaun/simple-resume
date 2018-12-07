@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Front End Developer, Web Design, Web Development, Wordpress, Wordpress Developer, Drupal,PHP, Laravel, SCSS, HTML5, CSS3, JavaScript, jQuery, GIT, ">
 	  <meta name="description" content="Hi. My name is DeShaun Jones and I’m a versatile Front-end Developer with 5+ years of experience designing, developing, and managing complex websites. I specialize in building custom WordPress themes from the ground up. My skill set also includes PHP, Laravel, SCSS, HTML5, CSS3, JavaScript, jQuery, GIT, WordPress Drupal and Grunt.js to name a few. I love creating for the web.">
-	  <meta property="og:image" content="http://deshaunjones.com/wp-content/uploads/2018/04/Portfolio-Jones-Resume.png" />
+	 <meta property="og:image" content="http://deshaunjones.com/wp-content/uploads/2018/11/WP-Theme-Portfolio-Image.png" />
     
     <!-- Custom CSS Styles -->
     

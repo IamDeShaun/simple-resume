@@ -1115,6 +1115,181 @@ span.site-hero h1 {
   text-align: center; }
 
 /*--------------------------------------------------------------
+# Blog Section
+--------------------------------------------------------------*/
+.blog-container {
+  width: auto;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto; }
+
+  #blog .post-thumb img {
+    max-height: 180px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+#blog {
+  padding-top: 2rem;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  margin-top: 4rem;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
+  background: linear-gradient(to top right, #f6f6f7, #fefefe);
+  text-align: center; }
+
+  #blog .card {
+      padding: 1rem;
+      margin: 10px;
+  }
+
+  #blog header h2 {
+    padding-bottom: 10px;
+  }
+
+  #blog .u-mb3 {
+    margin-bottom: 30px !important; }
+  #blog h4 a {
+    color: black !important; }
+  #blog h4 a:hover {
+    color: #007bff !important; }
+  #blog a {padding-right: 3px; font-weight: bold;}
+    #blog a:hover {
+      color: #007bff !important; }
+  #blog .u-pb2 {
+    padding-bottom: 20px !important; }
+  #blog .card h4 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: left; }
+  #blog .card p {
+    color: #667 !important; text-align: justify; }
+  #blog .post-thumb {
+    height: 180px;
+    overflow: hidden;
+ }
+  #blog .meta {
+    font-size: 12px; }
+  #blog .meta {
+    line-height: .8em;
+    color: #7b8a96;
+    text-align: left; }
+  #blog .meta > span {
+    display: inline-block;
+    padding-top: 2px; }
+  #blog .meta > span > a {
+    line-height: 1.2em; }
+  #blog .meta > span + span {
+    border-left: 1px solid #d9d9d9;
+    margin-left: .75em;
+    padding-left: .75em; }
+
+#blog-post {
+  background: #fff;
+  padding-top: 2rem;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  margin-top: 4rem; }
+  #blog-post .u-mb3 {
+    margin-bottom: 30px !important; }
+  #blog-post .section-header {
+    margin-bottom: 1rem !important; }
+  #blog-post h4 a {
+    color: black !important; }
+  #blog-post h4 a:hover {
+    color: #007bff !important; }
+
+    .meta a:hover {
+      color: #007bff !important; }
+
+    .entry-header { text-align: center;}
+    #blog-post h3 a {
+      color: black !important;
+    text-align: center; }
+    #blog-post h3 a:hover {
+      color: #007bff !important; }
+  #blog-post .u-pb2 {
+    padding-bottom: 20px !important; }
+  #blog-post .card h4 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: left; }
+  #blog-post .card p {
+    color: #667 !important; }
+  #blog-post .post-thumb {
+    height: 120px;
+    overflow: hidden;
+    max-width: 270px; }
+  #blog-post .meta {
+    font-size: 13px; }
+  #blog-post .meta {
+    line-height: .8em;
+    color: #7b8a96;
+    text-align: center;
+    margin-bottom: 2rem; }
+  #blog-post .meta > span {
+    display: inline-block;
+    padding-top: 2px; }
+  #blog-post .meta > span > a {
+    line-height: 1.2em; }
+  #blog-post .meta > span + span {
+    border-left: 1px solid #d9d9d9;
+    margin-left: .75em;
+    padding-left: .75em; }
+
+  #blog-post .post-banner {
+    height: 240px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 30px; }
+    .entry-footer {
+      text-align: left;
+      font-size: 13px;
+    }
+
+    #blog-post .post-banner img {
+      height: auto;
+      max-width: 100%;
+      max-height: 240px;
+      overflow: hidden;
+    }
+
+    .post-body {
+      margin-top: 30px;
+    }
+
+    #blog-post .post-banner {
+      height: 240px;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .post-banner-image {
+    width: 900px;
+    height: 240px;
+    overflow: hidden;
+    }
+
+    .post-banner-image img {
+      height: auto;
+      max-width: 100%;
+    }
+
+  .post-image img {
+    height: auto;
+  }
+
+  #comments {
+    display: none;
+  }
+
+  article a:hover {
+    color: #0056b3;
+  }
+/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 #contact {
@@ -1217,7 +1392,22 @@ span.site-hero h1 {
     width: 4px !important; }
 
   #contact h6 {
-    margin-bottom: 30px !important; } }
+    margin-bottom: 30px !important; }
+   
+    #blog .post-thumb {
+      margin-bottom:20px;
+      
+    }
+    #blog p {
+      text-align: left !important;
+    }
+
+    #blog-post h3 {
+      text-align: left;
+      padding-left: 10px;
+      
+    }
+  }
 
 
 
