@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Portfolio Page */
+/* Template Name: Portfolio */
 
 get_header(); ?>
 

@@ -26,7 +26,7 @@
 	
 	<div class="small-container">
 		<?php the_content(); ?>
-		<i class="fas fa-backward">  <a href="blog.html">Back To Blog</a></i> 
+		<i class="fas fa-backward">  <a href="http://dev-deshaunjones/blog/">Back To Blog</a></i> 
 	</div><!-- post-body -->
 
 </article><!-- #post-## -->

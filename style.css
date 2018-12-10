@@ -405,6 +405,60 @@ template {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+@media(min-width: 768px){
+     .dropdown-menu {
+      background: #1d1e25;
+      position: absolute;
+      display: none;}
+   li.menu-item-has-children:hover .dropdown-menu {
+     display: block;}
+}
+
+.dropdown-menu {
+  padding-left: 10px;
+  padding-right: 10px;
+  top: 35px;
+  min-width: 200px;
+}
+
+.dropdown-menu li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.dropdown-menu li a {
+color: #999;
+}
+
+.dropdown-menu li a:hover {
+color: #403027;
+text-decoration: none;
+}
+
+
+.navbar-nav li > a:only-child::after {
+    content: "";
+	display: inline-block;
+	margin-left: 4px;
+	
+}
+
+.navbar-nav li > a::after {
+    content: '\f0d7';
+	font-family: "Font Awesome 5 Free"; font-weight: 900;
+    position: absolute;
+    padding-top: 5px;
+	padding-left: 1px;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: .6rem !important;
+    padding-left: .6rem !important;
+}
+
+
+
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -1288,6 +1342,34 @@ span.site-hero h1 {
   article a:hover {
     color: #0056b3;
   }
+
+/*-------------------------------------------------------------
+  # Photography Section
+--------------------------------------------------------------*/
+
+.photography {
+  padding-top: 2rem;
+  margin-top: 4rem;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f6f6f7), to(#fefefe));
+  background: linear-gradient(to top right, #f6f6f7, #fefefe);
+  text-align: center; }
+
+  .photography a:hover {
+		color: #0056b3 !important;
+} 
+
+.cbpw-fullWidth-force {
+
+  position: relative;
+  top: 0;
+  left: 0 !important;
+}
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1338,6 +1420,14 @@ span.site-hero h1 {
   a.nav-link:hover {
     font-size: 1.5rem !important;
   }
+  
+  .dropdown-menu {
+     background: #1d1e25 !important;
+	}
+	
+.navbar-nav li > a::after {
+   
+}
   .site-hero {
     padding-top: 30px !important;
     margin-top: 50px !important;
