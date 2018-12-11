@@ -405,6 +405,9 @@ template {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+#menu-item-53 {
+  padding-left: 10px !important;
+}
 @media(max-width: 991px){
 .navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {
     max-width: 100% !important;
@@ -1283,6 +1286,16 @@ span.site-hero h1 {
   padding-bottom: 60px;
   margin-bottom: 60px;
   }
+
+#blog-post .blog-container {
+  width: auto;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
   #blog-post .u-mb3 {
     margin-bottom: 30px !important; }
   #blog-post .section-header {
@@ -1326,12 +1339,9 @@ span.site-hero h1 {
   #blog-post .meta > span > a {
     line-height: 1.2em; }
   #blog-post .meta > span + span {
-    border-left: 1px solid #d9d9d9;
-    margin-left: .75em;
-    padding-left: .75em; }
+    padding-left: .50em; }
 
   #blog-post .post-banner {
-    height: 240px;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -1353,7 +1363,7 @@ span.site-hero h1 {
     }
 
     #blog-post .post-banner {
-      height: 350px;
+
       width: 100%;
       overflow: hidden;
       text-align: center;
@@ -1398,6 +1408,9 @@ span.site-hero h1 {
 		color: #0056b3 !important;
 } 
 
+.photography .col-sm-6 img {
+  max-width: 100% !important;
+}
 .cbpw-fullWidth-force {
 
   position: relative;
@@ -1535,6 +1548,10 @@ span.site-hero h1 {
       text-align: left;
       padding-left: 10px;
       
+    }
+
+    #blog-post .meta {
+      text-align: left;
     }
   }
 

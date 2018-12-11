@@ -30,7 +30,7 @@ get_header(); ?>
    
         <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
         
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <a href="<?php the_permalink(); ?>"><?php the_field('money_shot'); ?>
           <h4><?php the_title(); ?></h4>
           </a>
