@@ -19,14 +19,14 @@
                 <i class="fa fa-tags"><?php the_tags(); ?></i>
 						</div>
 	<?php if ( has_post_thumbnail() ) { // check for feature image ?> 
-	<div class="small-container post-banner">
+	<div class="post-banner">
 		<?php the_post_thumbnail('post-thumbnail', array( 'class' => 'img-fluid' )); ?>
 	</div><!-- post-image -->
 	<?php } ?>
 	
-	<div class="small-container">
+	<div>
 		<?php the_content(); ?>
-		<i class="fas fa-backward">  <a href="http://dev-deshaunjones/blog/">Back To Blog</a></i> 
+		<a href="http://dev-deshaunjones/blog/"><i class="fas fa-arrow-circle-left"><strong>Back To Blog</strong></a></i> 
 	</div><!-- post-body -->
 
 </article><!-- #post-## -->

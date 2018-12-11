@@ -44,7 +44,7 @@
 
 	<!-- Top Navigation Area-->
   <header>
-      <nav class="navbar navbar-expand-sm navbar-light fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <span class="brandnew"><a class="navbar-brand" href="http://dev-deshaunjones/">DeShaun <strong>Jones</strong></a></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
