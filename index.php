@@ -20,6 +20,9 @@ get_header(); ?>
       <header>
           <h2>Latest Blog</h2>
       </header>
+		
+			<div id="primary" class="row">
+			<main id="content" class="col-md-7">	
 			<?php
 		if ( have_posts() ) :
 
@@ -30,7 +33,6 @@ get_header(); ?>
 				</header>
 				<?php
 			endif;
-
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -52,9 +54,14 @@ get_header(); ?>
 
 		endif;
 		?>
-
+			</main> <!-- End Content-->
+			<!-- SIDEBAR
+			================================================== -->
+		<aside class="col-md-5">
+             <?php get_sidebar(); ?>
+        </aside>
+		</div><!-- End Row-->
 			</div> <!-- End Blog-Container -->
 </section> <!-- End Blog Section -->
-
 
 <?php get_footer(); ?>

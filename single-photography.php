@@ -6,11 +6,11 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php the_content(); ?>
       <div class="small-container">
-          <header class="section-header">
-              <h2><?php the_title(); ?></h2>
-              <h4>Location: <?php the_field('photography_location') ?></h4>
-              <h4>Photographer: <?php the_field('photo_credit') ?></h4>
-          </header>
+          <div class="event-info">
+              <span><p><?php the_title(); ?></p></span>
+              <span><p>Location: <?php the_field('photography_location') ?></p></span>
+              <span><p>Photographer: <?php the_field('photo_credit') ?></p></span>
+          </div>
         </div><!-- End of Small Container-->
 
 <div class="container">

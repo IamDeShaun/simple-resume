@@ -17,7 +17,7 @@
               <span><i class="far fa-clock"> <?php the_date(); ?></i></span>
               <span>
                 <i class="fa fa-tags"><?php the_tags(); ?></i>
-						</div>
+  </div>
 	<?php if ( has_post_thumbnail() ) { // check for feature image ?> 
 	<div class="post-banner">
 		<?php the_post_thumbnail('post-thumbnail', array( 'class' => 'img-fluid' )); ?>
@@ -26,7 +26,7 @@
 	
 	<div>
 		<?php the_content(); ?>
-		<a href="http://dev-deshaunjones/blog/"><i class="fas fa-arrow-circle-left"><strong>Back To Blog</strong></a></i> 
+		<a href="http://dev-deshaunjones/blog/"><i class="fas fa-arrow-circle-left"><strong>Back To Blog</strong></i></a>
 	</div><!-- post-body -->
 
 </article><!-- #post-## -->

@@ -9,8 +9,6 @@
 
 ?>
 
-<div class="row">
-        <div class="col-sm-6">
           <article class="card">
 					<div class="card-img-top">
 					<?php if ( has_post_thumbnail() ) { // Check for post image ?>
@@ -42,5 +40,4 @@
                 <i class="fa fa-tags"><?php the_tags(); ?></i>
 						</div> <!-- End Meta-->
           </article> <!-- End Card-->
-        </div> <!-- End Col-Sm-6-->
-			</div> <!-- End Row-->
+        

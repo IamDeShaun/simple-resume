@@ -643,11 +643,24 @@ text-decoration: none;
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: .5em 0 1.5em;
   /* Make sure select elements fit in widgets. */
   border: solid 1px #ddd;
   border-radius: 4px;
   padding: 20px;
+  text-align: left;
+}
+
+#blog .widget .widget_recent_entries ul,li {
+	list-style-type: none;
+}
+
+#blog .widget a {
+
+}
+
+#blog .widget a:hover {
+	text-decoration: underline !important;
 }
 
 .widget select {
@@ -1245,9 +1258,9 @@ span.site-hero h1 {
     color: black !important; }
   #blog h4 a:hover {
     color: #007bff !important; }
-  #blog a {padding-right: 3px; font-weight: bold;}
+  #blog a {font-weight: bold;}
     #blog a:hover {
-      color: #007bff !important; }
+      color: #007bff; }
   #blog .u-pb2 {
     padding-bottom: 20px !important; }
   #blog .card h4 {
@@ -1396,6 +1409,9 @@ span.site-hero h1 {
 /*-------------------------------------------------------------
   # Photography Section
 --------------------------------------------------------------*/
+header .event-info > span {
+	display: inline-block;
+}
 
 .photography {
   padding-top: 2rem;
@@ -1412,10 +1428,10 @@ span.site-hero h1 {
   max-width: 100% !important;
 }
 .cbpw-fullWidth-force {
-
   position: relative;
   top: 0;
   left: 0 !important;
+ margin-bottom: 20px;
 }
 
 
