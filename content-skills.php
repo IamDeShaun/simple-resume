@@ -34,7 +34,7 @@ $skills_description = get_field('skills_description');
 
               <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-                <div class="col-sm-3 card">
+                <div class="col-lg-4 col-md-6 col-sm-12 card">
                 <?php the_field('skill_icon'); ?>
                     <h3><?php the_field('skill_title'); ?></h3>
                 </div><!-- End Card -->

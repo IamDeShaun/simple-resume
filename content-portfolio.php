@@ -31,7 +31,7 @@ $home_portfolio_link = get_field('home_portfolio_link');
 
               <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 
-              <div class="col-sm-4">
+              <div class="col-lg-4 col-md-12">
                   <a href="<?php the_field('hp_link_to_modal'); ?>" data-toggle="modal">
                   <?php the_field('hp_image'); ?>
                   <h6><?php the_title();?></h6>
